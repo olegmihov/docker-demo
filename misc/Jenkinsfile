@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v2/', 'juvemen') {
+     docker.withRegistry('https://index.docker.io/v2/', '52646325-3759-40cc-95e8-87ce28d4f931') {
        def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", '.').push()
      }
    }
